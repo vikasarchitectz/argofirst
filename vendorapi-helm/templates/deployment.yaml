@@ -33,12 +33,9 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          env:
-            - name: {{ .Values.env.name }}
-              valueFrom:
-                configMapKeyRef:
-                  key: {{ .Values.env.valueFrom.configMapKeyRef.key }}
-                  name: {{ .Values.env.valueFrom.configMapKeyRef.name }}
+          envFrom:
+            - configMapRef:
+                name: {{ .Values.envFrom.configMapRef.name }}
           ports:
             - name: http
               containerPort: 80
