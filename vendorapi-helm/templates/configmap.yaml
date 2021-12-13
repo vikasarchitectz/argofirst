@@ -4,3 +4,4 @@ metadata:
   name: vendor2-configmap
 data:
   myvalue: "Hello World"
+  myvalue2: "Test"
