@@ -35,7 +35,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           volumeMounts:
           - name: test
-            mountPath: "/config"
+            mountPath: /config/config.json
             readOnly: true
           ports:
             - name: http
