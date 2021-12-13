@@ -34,11 +34,11 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
-            - name: variablefromcm
+            - name: {{ .Values.env.name }}
               valueFrom:
                 configMapKeyRef:
-                  key: myvalue
-                  name: vendor2-configmap
+                  key: {{ .Values.env.valueFrom.configMapKeyRef.key }}
+                  name: {{ .Values.env.valueFrom.configMapKeyRef.name }}
           ports:
             - name: http
               containerPort: 80
