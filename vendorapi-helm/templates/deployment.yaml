@@ -38,7 +38,7 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   key: myvalue
-                  name: envcm
+                  name: vendor2-configmap
           ports:
             - name: http
               containerPort: 80
