@@ -37,17 +37,6 @@ spec:
             - name: test
               mountPath: "/config"
               readOnly: true
-#          env:
-#             - name: valuefromcm
-#               valueFrom:
-#                 configMapKeyRef:
-#                   key: myvalue
-#                   name: vendor2-configmap
-#             - name: valueofcm
-#               valueFrom:
-#                 configMapKeyRef:
-#                   key: myvalue2
-#                   name: vendor2-configmap
           ports:
             - name: http
               containerPort: 80
