@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: vendor2-configmap
 data:
-  myvalue: "Hello World"
+  myvalue: "Hello"
   myvalue2: "Test"
