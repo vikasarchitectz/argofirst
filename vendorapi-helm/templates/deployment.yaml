@@ -45,9 +45,9 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
       volumes: 
-        - name: test
-          configMap:
-            name: vendor2-configmap
+      - name: test
+        configMap:
+          name: vendor2-configmap
       nodeSelector:
         {{- toYaml . | nindent 8 }}
       {{- end }}
