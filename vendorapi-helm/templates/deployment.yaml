@@ -39,7 +39,7 @@ spec:
                 configMapKeyRef:
                   key: myvalue
                   name: vendor2-configmap
-            - name: valuefromcm1
+            - name: valueofcm
               valueFrom:
                 configMapKeyRef:
                   key: myvalue2
